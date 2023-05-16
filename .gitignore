@@ -1,0 +1,12 @@
+/**/node_modules
+
+abis/*.d.ts
+
+**/*.tgz
+
+packages/**/*.ts
+
+# Save package.json files in packages
+!packages/**/package.json
+
+lib/

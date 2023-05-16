@@ -1,0 +1,42 @@
+{
+  "name": "@electra.finance/contracts",
+  "version": "0.1.0",
+  "description": "Electra Finance contracts typings",
+  "scripts": {
+    "lerna": "lerna",
+    "typechain:all": "lerna run typechain",
+    "clean:all": "lerna run clean",
+    "prebuild": "npm run clean:all && npm run typechain:all",
+    "build": "./prepare.sh && tsc",
+    "postpublish": "npm run publish-npm",
+    "publish-npm": "npm publish --access public --ignore-scripts --@electra.finance:registry='https://registry.npmjs.org'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElectraFinance/contracts.git"
+  },
+  "keywords": [
+    "electra",
+    "electrafinance",
+    "contracts",
+    "typescript",
+    "typed"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElectraFinance/contracts/issues"
+  },
+  "homepage": "https://github.com/ElectraFinance/contracts#readme",
+  "devDependencies": {
+    "lerna": "^6.6.1",
+    "rimraf": "^5.0.0",
+    "typechain": "^8.1.1"
+  },
+  "files": [
+    "lib",
+    "abis"
+  ],
+  "workspaces": [
+    "packages/*"
+  ]
+}
