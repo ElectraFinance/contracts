@@ -6,7 +6,4 @@ abis/*.d.ts
 
 packages/**/*.ts
 
-# Save package.json files in packages
-!packages/**/package.json
-
 lib/
