@@ -1,6 +1,6 @@
 {
   "name": "@electra.finance/contracts",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Electra Finance contracts typings",
   "scripts": {
     "lerna": "lerna",
