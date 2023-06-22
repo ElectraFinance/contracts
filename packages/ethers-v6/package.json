@@ -2,7 +2,9 @@
   "name": "@electra.finance/contracts-ethers-v6",
   "main": "index.ts",
   "scripts": {
-    "clean": "rimraf ./*.ts && rimraf ./factories",
+    "clean": "rimraf ./*.ts ./factories",
+    "clean:turbo": "rimraf ./.turbo",
+    "clean:node-modules": "rimraf ./node_modules",
     "typechain": "typechain --target=ethers-v6 ../../abis/*.json --out-dir ."
   },
   "license": "MIT",

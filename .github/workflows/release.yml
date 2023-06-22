@@ -11,14 +11,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: "18.x"
       - run: sudo apt install -y jq
-      - run: npm run lerna bootstrap
+      - run: npm run i
       - run: npm run build
       # - name: Set package registry
-        # run: npm config set registry https://npm.pkg.github.com
+      # run: npm config set registry https://npm.pkg.github.com
       # - name: Github package registry authentication
-        # run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.GITHUB_TOKEN }}
+      # run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.GITHUB_TOKEN }}
       - name: Npm registry authentication
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
       - name: Publish the package to Github and Npm package registries

@@ -3,6 +3,8 @@
   "main": "index.ts",
   "scripts": {
     "clean": "rimraf ./*.ts",
+    "clean:turbo": "rimraf ./.turbo",
+    "clean:node-modules": "rimraf ./node_modules",
     "typechain": "typechain --target=web3-v1 ../../abis/*.json --out-dir ."
   },
   "license": "MIT",

@@ -1,12 +1,13 @@
 {
   "name": "@electra.finance/contracts",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Electra Finance contracts typings",
   "scripts": {
-    "lerna": "lerna",
-    "typechain:all": "lerna run typechain",
-    "clean:all": "lerna run clean",
-    "prebuild": "npm run clean:all && npm run typechain:all",
+    "typechain": "turbo run typechain",
+    "clean": "turbo run clean",
+    "clean:turbo": "turbo run clean:turbo",
+    "clean:node-modules": "turbo run clean:node-modules",
+    "prebuild": "npm run clean && npm run typechain",
     "build": "./prepare.sh && tsc"
   },
   "repository": {
@@ -26,9 +27,9 @@
   },
   "homepage": "https://github.com/ElectraFinance/contracts#readme",
   "devDependencies": {
-    "lerna": "5.5.2",
     "rimraf": "^5.0.0",
-    "typechain": "^8.1.1"
+    "typechain": "^8.1.1",
+    "turbo": "^1.10.4"
   },
   "files": [
     "lib",
