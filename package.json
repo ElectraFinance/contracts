@@ -9,7 +9,7 @@
     "clean:node-modules": "turbo run clean:node-modules",
     "prepare": "./prepare.sh",
     "tsc": "tsc",
-    "build": "turbo run build"
+    "build": "turbo build && npm run tsc"
   },
   "repository": {
     "type": "git",

@@ -1,13 +1,24 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "pipeline": {
+        "tsc": {
+            "cache": false
+        },
+        "clean": {
+            "cache": false
+        },
         "typechain": {
+            "cache": false
+        },
+        "prepare": {
             "cache": false
         },
         "build": {
             "cache": false,
             "dependsOn": [
-                "typechain"
+                "prepare",
+                "typechain",
+                "tsc"
             ]
         },
         "lint": {},
