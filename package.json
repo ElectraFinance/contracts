@@ -7,8 +7,9 @@
     "clean": "turbo run clean",
     "clean:turbo": "turbo run clean:turbo",
     "clean:node-modules": "turbo run clean:node-modules",
-    "prebuild": "npm run clean && npm run typechain",
-    "build": "./prepare.sh && tsc"
+    "prepare": "./prepare.sh",
+    "tsc": "tsc",
+    "build": "turbo run build"
   },
   "repository": {
     "type": "git",
