@@ -1,19 +1,20 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "pipeline": {
-        "clean:turbo": {},
         "clean:node-modules": {},
         "clean": {
             "dependsOn": [
-                "clean:turbo",
                 "clean:node-modules"
             ],
             "cache": false
         },
-        "typechain": {},
+        "typechain": {
+            "cache": false
+        },
         "build": {
+            "cache": false,
             "dependsOn": [
-                "^typechain"
+                "^prebuild"
             ]
         },
         "lint": {},
