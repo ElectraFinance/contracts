@@ -19,132 +19,10 @@
     "type": "event"
   },
   {
-    "inputs": [],
-    "name": "a1",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a2",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a3",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a4",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a5",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a6",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a7",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a8",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "a9",
-    "outputs": [
-      {
-        "internalType": "uint80",
-        "name": "",
-        "type": "uint80"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address[]",
-        "name": "added",
-        "type": "address[]"
-      },
-      {
-        "internalType": "address[]",
-        "name": "removed",
+        "name": "priceProviders",
         "type": "address[]"
       }
     ],
@@ -156,17 +34,17 @@
   {
     "inputs": [
       {
-        "internalType": "uint8",
+        "internalType": "uint256",
         "name": "index",
-        "type": "uint8"
+        "type": "uint256"
       }
     ],
     "name": "getPrice",
     "outputs": [
       {
-        "internalType": "uint64",
+        "internalType": "uint80",
         "name": "price",
-        "type": "uint64"
+        "type": "uint80"
       }
     ],
     "stateMutability": "view",
@@ -233,38 +111,17 @@
   {
     "inputs": [
       {
-        "internalType": "uint256[]",
-        "name": "prices",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "setPriceWithMapping",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      },
       {
-        "internalType": "uint80[]",
-        "name": "prices",
-        "type": "uint80[]"
+        "internalType": "uint80",
+        "name": "price",
+        "type": "uint80"
       }
     ],
-    "name": "setPriceWithoutAssembly",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32[]",
-        "name": "prices",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "setPriceWithoutCicle",
+    "name": "setPrice",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -278,6 +135,34 @@
       }
     ],
     "name": "setPrices",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "indexes",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint80[]",
+        "name": "prices_",
+        "type": "uint80[]"
+      },
+      {
+        "internalType": "address",
+        "name": "cfd",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "setPricesWithCallBack",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
