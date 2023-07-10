@@ -67,6 +67,11 @@
   },
   {
     "inputs": [],
+    "name": "OrderIsAlreadyFilled",
+    "type": "error"
+  },
+  {
+    "inputs": [],
     "name": "PriceOfLiquidatedInstrumentNotFirst",
     "type": "error"
   },
@@ -155,6 +160,12 @@
         "internalType": "uint16",
         "name": "withdrawMarginLevel",
         "type": "uint16"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxOpenPositions",
+        "type": "uint256"
       }
     ],
     "name": "BasicParamsUpdate",
@@ -357,22 +368,42 @@
         "type": "int112"
       },
       {
+        "components": [
+          {
+            "internalType": "int112",
+            "name": "position",
+            "type": "int112"
+          },
+          {
+            "internalType": "int112",
+            "name": "frAccumulated",
+            "type": "int112"
+          },
+          {
+            "internalType": "uint32",
+            "name": "positionLastUpdate",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint80",
+            "name": "positionAvgPrice",
+            "type": "uint80"
+          },
+          {
+            "internalType": "int72",
+            "name": "positionLongFRStored",
+            "type": "int72"
+          },
+          {
+            "internalType": "int72",
+            "name": "positionShortFRStored",
+            "type": "int72"
+          }
+        ],
         "indexed": false,
-        "internalType": "int112",
+        "internalType": "struct CFD.PositionInfo",
         "name": "position",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint80",
-        "name": "avgPositionPrice",
-        "type": "uint80"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "accumulatedFundingRate",
-        "type": "int112"
+        "type": "tuple"
       },
       {
         "indexed": false,
@@ -790,6 +821,25 @@
     "name": "fillOrders",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "filledAmounts",
+    "outputs": [
+      {
+        "internalType": "uint96",
+        "name": "",
+        "type": "uint96"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1392,6 +1442,11 @@
         "internalType": "uint16",
         "name": "withdrawMarginLevel_",
         "type": "uint16"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxOpenPositions_",
+        "type": "uint256"
       }
     ],
     "name": "setBasicParams",
