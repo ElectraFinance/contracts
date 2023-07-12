@@ -285,6 +285,12 @@
         "internalType": "int72",
         "name": "shortFRStored",
         "type": "int72"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
       }
     ],
     "name": "NewFundingRate",
