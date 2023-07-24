@@ -89,49 +89,6 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "liquidatedInstrument",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint112",
-        "name": "liquidationFee",
-        "type": "uint112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "balance",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "realizedPNL",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "realizedFR",
-        "type": "int112"
-      }
-    ],
-    "name": "AccountLiquidated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
         "indexed": false,
         "internalType": "address",
         "name": "oracle",
@@ -166,6 +123,12 @@
         "internalType": "uint256",
         "name": "maxOpenPositions",
         "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint112",
+        "name": "liquidationFeePercent",
+        "type": "uint112"
       }
     ],
     "name": "BasicParamsUpdate",
@@ -226,6 +189,19 @@
       }
     ],
     "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "InstrumentDeleted",
     "type": "event"
   },
   {
@@ -350,6 +326,49 @@
       }
     ],
     "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "liquidatedInstrument",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint112",
+        "name": "liquidationFee",
+        "type": "uint112"
+      },
+      {
+        "indexed": false,
+        "internalType": "int112",
+        "name": "balance",
+        "type": "int112"
+      },
+      {
+        "indexed": false,
+        "internalType": "int112",
+        "name": "realizedPNL",
+        "type": "int112"
+      },
+      {
+        "indexed": false,
+        "internalType": "int112",
+        "name": "realizedFR",
+        "type": "int112"
+      }
+    ],
+    "name": "PositionLiquidated",
     "type": "event"
   },
   {
@@ -663,6 +682,13 @@
         "type": "bytes"
       }
     ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deleteInstrument",
+    "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
@@ -1258,6 +1284,11 @@
         "internalType": "uint16",
         "name": "withdrawMarginLevel_",
         "type": "uint16"
+      },
+      {
+        "internalType": "uint112",
+        "name": "liquidationFeePercent_",
+        "type": "uint112"
       }
     ],
     "name": "initialize",
@@ -1453,6 +1484,11 @@
         "internalType": "uint256",
         "name": "maxOpenPositions_",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint112",
+        "name": "liquidationFeePercent_",
+        "type": "uint112"
       }
     ],
     "name": "setBasicParams",
@@ -1579,7 +1615,7 @@
         "type": "address"
       }
     ],
-    "name": "withdrawAssetTo",
+    "name": "withdrawAssetTo" ,
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
