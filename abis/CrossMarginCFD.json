@@ -12,6 +12,11 @@
   },
   {
     "inputs": [],
+    "name": "CantWithdrawWithOpenPositions",
+    "type": "error"
+  },
+  {
+    "inputs": [],
     "name": "DelegateDoesNotExist",
     "type": "error"
   },
@@ -1372,6 +1377,93 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "accountToLiquidate",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "liquidator",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "index",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint80",
+                "name": "price",
+                "type": "uint80"
+              }
+            ],
+            "internalType": "struct LibValidatorMultiCFD.PriceInfo[]",
+            "name": "liquidationPrices",
+            "type": "tuple[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "index",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint80",
+                "name": "price",
+                "type": "uint80"
+              }
+            ],
+            "internalType": "struct LibValidatorMultiCFD.PriceInfo[]",
+            "name": "prices",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint64",
+            "name": "liquidationTimestamp",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct LibValidatorMultiCFD.MultiLiquidationOrder",
+        "name": "liquidationOrder",
+        "type": "tuple"
+      }
+    ],
+    "name": "liquidatePositions",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "liquidationFeePercent",
+    "outputs": [
+      {
+        "internalType": "uint112",
+        "name": "",
+        "type": "uint112"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "oracle",
     "outputs": [
@@ -1615,7 +1707,7 @@
         "type": "address"
       }
     ],
-    "name": "withdrawAssetTo" ,
+    "name": "withdrawAssetTo",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
