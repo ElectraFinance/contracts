@@ -1,6 +1,6 @@
 {
   "name": "@electra.finance/contracts",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "Electra Finance contracts typings",
   "scripts": {
     "typechain": "turbo run typechain",
