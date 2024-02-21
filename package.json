@@ -1,6 +1,6 @@
 {
   "name": "@electra.finance/contracts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "Electra Finance contracts typings",
   "scripts": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/ElectraFinance/contracts#readme",
   "devDependencies": {
     "rimraf": "^5.0.0",
-    "typechain": "^8.1.1",
+    "typechain": "^8.3.1",
     "turbo": "^1.10.4"
   },
   "files": [
