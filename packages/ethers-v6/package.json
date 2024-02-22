@@ -5,7 +5,7 @@
     "clean": "rimraf ./*.ts ./factories",
     "clean:turbo": "rimraf ./.turbo",
     "clean:node-modules": "rimraf ./node_modules",
-    "typechain": "typechain --target=ethers-v6 ../../abis/*.json --out-dir ."
+    "typechain": "typechain --node16-modules --target=ethers-v6 ../../abis/*.json --out-dir ."
   },
   "license": "MIT",
   "dependencies": {
