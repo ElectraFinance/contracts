@@ -1,0 +1,207 @@
+[
+  { "inputs": [], "name": "NonCollateralSwapRequested", "type": "error" },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "version",
+        "type": "uint8"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "collateral",
+    "outputs": [
+      { "internalType": "contract IERC20", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "trader", "type": "address" },
+      { "internalType": "bytes", "name": "call_data", "type": "bytes" }
+    ],
+    "name": "delegatedAction",
+    "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "electra",
+    "outputs": [
+      { "internalType": "contract ICFD", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "exchange",
+    "outputs": [
+      {
+        "internalType": "contract IExchangeWithGenericSwap",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDelegateStorage",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "delegateStorage",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getSenderOverride",
+    "outputs": [
+      { "internalType": "address", "name": "senderOverride", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "electra_", "type": "address" },
+      { "internalType": "address", "name": "exchange_", "type": "address" }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "electra_", "type": "address" },
+      { "internalType": "address", "name": "exchange_", "type": "address" }
+    ],
+    "name": "setBasicParams",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "delegateStorage_",
+        "type": "address"
+      }
+    ],
+    "name": "setDelegateStorage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract IAggregationExecutor",
+        "name": "executor",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "contract IERC20",
+            "name": "srcToken",
+            "type": "address"
+          },
+          {
+            "internalType": "contract IERC20",
+            "name": "dstToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address payable",
+            "name": "srcReceiver",
+            "type": "address"
+          },
+          {
+            "internalType": "address payable",
+            "name": "dstReceiver",
+            "type": "address"
+          },
+          { "internalType": "uint256", "name": "amount", "type": "uint256" },
+          {
+            "internalType": "uint256",
+            "name": "minReturnAmount",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "flags", "type": "uint256" }
+        ],
+        "internalType": "struct LibValidatorExchangeWithGenericSwap.SwapDescription",
+        "name": "desc",
+        "type": "tuple"
+      },
+      { "internalType": "bytes", "name": "permit", "type": "bytes" },
+      { "internalType": "bytes", "name": "data", "type": "bytes" }
+    ],
+    "name": "swap",
+    "outputs": [
+      { "internalType": "uint256", "name": "returnAmount", "type": "uint256" },
+      { "internalType": "uint256", "name": "spentAmount", "type": "uint256" },
+      { "internalType": "uint256", "name": "gasLeft", "type": "uint256" }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "newOwner", "type": "address" }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
