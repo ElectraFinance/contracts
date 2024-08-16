@@ -52,6 +52,11 @@
   },
   {
     "inputs": [],
+    "name": "InternalTransferIncorrectSender",
+    "type": "error"
+  },
+  {
+    "inputs": [],
     "name": "LiquidationOfPositionInProfit",
     "type": "error"
   },
@@ -86,8 +91,29 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "UnauthorizedAccount",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UnauthorizedTransfer",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "WithdrawMoreThanBalance",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ZeroPositionLiquidation",
     "type": "error"
   },
   {
@@ -1312,6 +1338,61 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint112",
+            "name": "amount",
+            "type": "uint112"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint192",
+            "name": "reserved",
+            "type": "uint192"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct LibValidatorMultiCFD.InternalTransfer",
+        "name": "transfer",
+        "type": "tuple"
+      }
+    ],
+    "name": "internalTransfer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
