@@ -1,481 +1,146 @@
 [
   {
-    "inputs": [
+    "inputs": [],
+    "name": "DELEGATION_REQUEST_TYPEHASH",
+    "outputs": [
       {
-        "internalType": "address",
-        "name": "collateral_",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-  },
-  {
-    "inputs": [],
-    "name": "CantWithdrawWithOpenPositions",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "DelegateDoesNotExist",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "DifferentInstrumentIndexes",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "IncorrectInstrumentIndexes",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "IncorrectOrder",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "IncorrectSenderAddress",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "InstrumentDoesNotExist",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "InsufficientMargin",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "InternalTransferIncorrectSender",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "LiquidationOfPositionInProfit",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "MaxOpenPositionsExceeded",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "NegativeEquityAfterLiquidation",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "NotApprovedMatcher",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "OrderIsAlreadyFilled",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "PriceOfLiquidatedInstrumentNotFirst",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "SufficientMargin",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
+        "internalType": "bytes32",
         "name": "",
-        "type": "address"
+        "type": "bytes32"
       }
     ],
-    "name": "UnauthorizedAccount",
-    "type": "error"
+    "stateMutability": "view",
+    "type": "function"
   },
   {
     "inputs": [],
-    "name": "UnauthorizedTransfer",
-    "type": "error"
+    "name": "DOMAIN_NAME",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
     "inputs": [],
-    "name": "WithdrawMoreThanBalance",
-    "type": "error"
+    "name": "DOMAIN_SALT",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
     "inputs": [],
-    "name": "ZeroPositionLiquidation",
-    "type": "error"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
+    "name": "DOMAIN_SEPARATOR",
+    "outputs": [
       {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oracle",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "delegateStorage",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "fundingRateAccount",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint8",
-        "name": "soLevel",
-        "type": "uint8"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint16",
-        "name": "withdrawMarginLevel",
-        "type": "uint16"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "maxOpenPositions",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint112",
-        "name": "liquidationFeePercent",
-        "type": "uint112"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "BasicParamsUpdate",
-    "type": "event"
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "DOMAIN_VERSION",
+    "outputs": [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "soLevel",
-        "type": "int112"
+        "internalType": "string",
+        "name": "",
+        "type": "string"
       }
     ],
-    "name": "CustomStopOutLevelUpdate",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "EIP712_DOMAIN_TYPEHASH",
+    "outputs": [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "amount",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "finalBalance",
-        "type": "int112"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "DepositBalanceChanged",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "INTERNAL_TRANSFER_TYPEHASH",
+    "outputs": [
       {
-        "indexed": false,
-        "internalType": "uint8",
-        "name": "version",
-        "type": "uint8"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "Initialized",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "LIQUIDATION_ORDER_TYPEHASH",
+    "outputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "InstrumentDeleted",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "MULTI_LIQUIDATION_ORDER_TYPEHASH",
+    "outputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[12]",
-        "name": "ticker",
-        "type": "string[12]"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint8",
-        "name": "leverage",
-        "type": "uint8"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "InstrumentUpdate",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "ORDER_TYPEHASH",
+    "outputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "int48",
-        "name": "frLongPerSecond",
-        "type": "int48"
-      },
-      {
-        "indexed": false,
-        "internalType": "int48",
-        "name": "frShortPerSecond",
-        "type": "int48"
-      },
-      {
-        "indexed": false,
-        "internalType": "int72",
-        "name": "longFRStored",
-        "type": "int72"
-      },
-      {
-        "indexed": false,
-        "internalType": "int72",
-        "name": "shortFRStored",
-        "type": "int72"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "timestamp",
-        "type": "uint256"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "NewFundingRate",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "PRICE_INFO_TYPEHASH",
+    "outputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "buyer",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "seller",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint80",
-        "name": "filledPrice",
-        "type": "uint80"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint192",
-        "name": "filledAmount",
-        "type": "uint192"
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
-    "name": "NewTrade",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "previousOwner",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "newOwner",
-        "type": "address"
-      }
-    ],
-    "name": "OwnershipTransferred",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "liquidatedInstrument",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint112",
-        "name": "liquidationFee",
-        "type": "uint112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "balance",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "realizedPNL",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "realizedFR",
-        "type": "int112"
-      }
-    ],
-    "name": "PositionLiquidated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "balance",
-        "type": "int112"
-      },
-      {
-        "components": [
-          {
-            "internalType": "int112",
-            "name": "position",
-            "type": "int112"
-          },
-          {
-            "internalType": "int112",
-            "name": "frAccumulated",
-            "type": "int112"
-          },
-          {
-            "internalType": "uint32",
-            "name": "positionLastUpdate",
-            "type": "uint32"
-          },
-          {
-            "internalType": "uint80",
-            "name": "positionAvgPrice",
-            "type": "uint80"
-          },
-          {
-            "internalType": "int72",
-            "name": "positionLongFRStored",
-            "type": "int72"
-          },
-          {
-            "internalType": "int72",
-            "name": "positionShortFRStored",
-            "type": "int72"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct CFD.PositionInfo",
-        "name": "position",
-        "type": "tuple"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "realizedPNL",
-        "type": "int112"
-      },
-      {
-        "indexed": false,
-        "internalType": "int112",
-        "name": "realizedFR",
-        "type": "int112"
-      }
-    ],
-    "name": "PositionUpdate",
-    "type": "event"
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
     "inputs": [],
@@ -522,7 +187,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "",
+        "name": "matcher",
         "type": "address"
       }
     ],
@@ -540,8 +205,21 @@
   {
     "inputs": [
       {
+        "internalType": "uint64",
+        "name": "chainId",
+        "type": "uint64"
+      }
+    ],
+    "name": "approveCustomNetwork",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
-        "name": "",
+        "name": "account",
         "type": "address"
       }
     ],
@@ -554,6 +232,163 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "derivedAccount",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "derivedAccountSalt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "externalAddress",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "derivedAccountSignature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.ExternalAddressBinding",
+        "name": "binding",
+        "type": "tuple"
+      }
+    ],
+    "name": "bindExternalAccount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "derivedAccount",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "derivedAccountSalt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "externalAddress",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "derivedAccountSignature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.ExternalAddressBinding",
+        "name": "binding",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint112",
+            "name": "amount",
+            "type": "uint112"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "uniqueHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes",
+            "name": "externalAddress",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.InternalTransferV2",
+        "name": "initialDeposit",
+        "type": "tuple"
+      }
+    ],
+    "name": "bindExternalAccountWithDeposit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -576,7 +411,7 @@
             "type": "uint80"
           }
         ],
-        "internalType": "struct LibValidatorMultiCFD.PriceInfo[]",
+        "internalType": "struct CFDStructs.PriceInfo[]",
         "name": "prices",
         "type": "tuple[]"
       },
@@ -620,6 +455,91 @@
   {
     "inputs": [
       {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isSetDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint88",
+            "name": "deadline",
+            "type": "uint88"
+          },
+          {
+            "internalType": "address",
+            "name": "delegate",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.DelegationRequest",
+        "name": "request",
+        "type": "tuple"
+      }
+    ],
+    "name": "changeDelegateFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isSetDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint88",
+            "name": "deadline",
+            "type": "uint88"
+          },
+          {
+            "internalType": "address",
+            "name": "delegate",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.DelegationRequest",
+        "name": "request",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint64",
+        "name": "chainId",
+        "type": "uint64"
+      }
+    ],
+    "name": "changeDelegateWithChainId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint256",
         "name": "index",
         "type": "uint256"
@@ -653,6 +573,415 @@
   {
     "inputs": [
       {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "derivedAccount",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "derivedAccountSalt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "externalAddress",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "derivedAccountSignature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.ExternalAddressBinding",
+        "name": "binding",
+        "type": "tuple"
+      }
+    ],
+    "name": "checkAddressBindingSignature",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "digest",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isSetDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint88",
+            "name": "deadline",
+            "type": "uint88"
+          },
+          {
+            "internalType": "address",
+            "name": "delegate",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.DelegationRequest",
+        "name": "delegationRequest",
+        "type": "tuple"
+      }
+    ],
+    "name": "checkDelegationRequest",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "delegationRequestDigest",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isSetDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint88",
+            "name": "deadline",
+            "type": "uint88"
+          },
+          {
+            "internalType": "address",
+            "name": "delegate",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.DelegationRequest",
+        "name": "delegationRequest",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint64",
+        "name": "chainId",
+        "type": "uint64"
+      }
+    ],
+    "name": "checkDelegationRequestWithChainId",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "delegationRequestDigest",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint112",
+            "name": "amount",
+            "type": "uint112"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint192",
+            "name": "reserved",
+            "type": "uint192"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.InternalTransfer",
+        "name": "internalTransfer",
+        "type": "tuple"
+      }
+    ],
+    "name": "checkInternalTransfer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint112",
+            "name": "amount",
+            "type": "uint112"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "uniqueHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes",
+            "name": "externalAddress",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.InternalTransferV2",
+        "name": "internalTransfer",
+        "type": "tuple"
+      }
+    ],
+    "name": "checkInternalTransferV2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "accountToLiquidate",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "liquidator",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "index",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint80",
+                "name": "price",
+                "type": "uint80"
+              }
+            ],
+            "internalType": "struct CFDStructs.PriceInfo[]",
+            "name": "liquidationPrices",
+            "type": "tuple[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "index",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint80",
+                "name": "price",
+                "type": "uint80"
+              }
+            ],
+            "internalType": "struct CFDStructs.PriceInfo[]",
+            "name": "prices",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint64",
+            "name": "liquidationTimestamp",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.MultiLiquidationOrder",
+        "name": "liquidationOrder",
+        "type": "tuple"
+      }
+    ],
+    "name": "checkLiquidationOrder",
+    "outputs": [],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "accountToLiquidate",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "liquidator",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "index",
+            "type": "uint16"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "index",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint80",
+                "name": "price",
+                "type": "uint80"
+              }
+            ],
+            "internalType": "struct CFDStructs.PriceInfo[]",
+            "name": "prices",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint64",
+            "name": "liquidationTimestamp",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.LiquidationOrder",
+        "name": "liquidationOrder",
+        "type": "tuple"
+      }
+    ],
+    "name": "checkLiquidationOrder",
+    "outputs": [],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
         "name": "account",
         "type": "address"
@@ -677,81 +1006,6 @@
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "collateral",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "trader",
-        "type": "address"
-      },
-      {
-        "internalType": "bytes",
-        "name": "call_data",
-        "type": "bytes"
-      }
-    ],
-    "name": "delegatedAction",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "deleteInstrument",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint112",
-        "name": "amount",
-        "type": "uint112"
-      }
-    ],
-    "name": "depositAsset",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint112",
-        "name": "amount",
-        "type": "uint112"
-      },
-      {
-        "internalType": "address",
-        "name": "to",
-        "type": "address"
-      }
-    ],
-    "name": "depositAssetTo",
-    "outputs": [],
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -809,7 +1063,7 @@
             "type": "bytes"
           }
         ],
-        "internalType": "struct LibValidatorMultiCFD.Order",
+        "internalType": "struct CFDStructs.Order",
         "name": "buyOrder",
         "type": "tuple"
       },
@@ -866,7 +1120,631 @@
             "type": "bytes"
           }
         ],
-        "internalType": "struct LibValidatorMultiCFD.Order",
+        "internalType": "struct CFDStructs.Order",
+        "name": "sellOrder",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "buyOrderSigner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "sellOrderSigner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "filledAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "filledPrice",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "allowedMatcher",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "instrumentsLength",
+        "type": "uint256"
+      }
+    ],
+    "name": "checkOrdersInfo",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "buyOrderDigest",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "sellOrderDigest",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price2",
+            "type": "uint80"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "orderType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.OrderV2",
+        "name": "buyOrder",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price2",
+            "type": "uint80"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "orderType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.OrderV2",
+        "name": "sellOrder",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "buyOrderSigner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "sellOrderSigner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "filledAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "filledPrice",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "allowedMatcher",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "instrumentsLength",
+        "type": "uint256"
+      }
+    ],
+    "name": "checkOrdersV2Info",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "buyOrderDigest",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "sellOrderDigest",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "collateral",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "customStopOutLevel",
+    "outputs": [
+      {
+        "internalType": "int112",
+        "name": "",
+        "type": "int112"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "trader",
+        "type": "address"
+      }
+    ],
+    "name": "delegateFromTimeout",
+    "outputs": [
+      {
+        "internalType": "uint88",
+        "name": "timeLeft",
+        "type": "uint88"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "trader",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "call_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "delegatedAction",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "trader",
+        "type": "address"
+      }
+    ],
+    "name": "delegations",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deleteInstrument",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint112",
+        "name": "amount",
+        "type": "uint112"
+      }
+    ],
+    "name": "depositAsset",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint112",
+        "name": "amount",
+        "type": "uint112"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      }
+    ],
+    "name": "depositAssetTo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "facetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IDiamondCut.FacetCutAction",
+            "name": "action",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes4[]",
+            "name": "functionSelectors",
+            "type": "bytes4[]"
+          }
+        ],
+        "internalType": "struct IDiamondCut.FacetCut[]",
+        "name": "diamondCut_",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "address",
+        "name": "init_",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "calldata_",
+        "type": "bytes"
+      }
+    ],
+    "name": "diamondCut",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "_functionSelector",
+        "type": "bytes4"
+      }
+    ],
+    "name": "facetAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "facetAddress_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "facetAddresses",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "facetAddresses_",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_facet",
+        "type": "address"
+      }
+    ],
+    "name": "facetFunctionSelectors",
+    "outputs": [
+      {
+        "internalType": "bytes4[]",
+        "name": "facetFunctionSelectors_",
+        "type": "bytes4[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "facets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "facetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes4[]",
+            "name": "functionSelectors",
+            "type": "bytes4[]"
+          }
+        ],
+        "internalType": "struct IDiamondLoupe.Facet[]",
+        "name": "facets_",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.Order",
+        "name": "buyOrder",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.Order",
         "name": "sellOrder",
         "type": "tuple"
       },
@@ -889,8 +1767,170 @@
   {
     "inputs": [
       {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price2",
+            "type": "uint80"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "orderType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.OrderV2",
+        "name": "buyOrder",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price2",
+            "type": "uint80"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "orderType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.OrderV2",
+        "name": "sellOrder",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint80",
+        "name": "filledPrice",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint96",
+        "name": "filledAmount",
+        "type": "uint96"
+      }
+    ],
+    "name": "fillOrdersV2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes32",
-        "name": "",
+        "name": "orderHash",
         "type": "bytes32"
       }
     ],
@@ -935,7 +1975,7 @@
     "outputs": [
       {
         "internalType": "int112",
-        "name": "",
+        "name": "fundingRate",
         "type": "int112"
       }
     ],
@@ -959,7 +1999,7 @@
     "outputs": [
       {
         "internalType": "address[]",
-        "name": "res",
+        "name": "",
         "type": "address[]"
       }
     ],
@@ -1033,7 +2073,7 @@
             "type": "int72"
           }
         ],
-        "internalType": "struct CFD.PositionInfo[]",
+        "internalType": "struct CFDStructs.PositionInfo[]",
         "name": "positions",
         "type": "tuple[]"
       }
@@ -1061,13 +2101,151 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isSetDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint88",
+            "name": "deadline",
+            "type": "uint88"
+          },
+          {
+            "internalType": "address",
+            "name": "delegate",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.DelegationRequest",
+        "name": "delegationRequest",
+        "type": "tuple"
+      }
+    ],
+    "name": "getDelegationRequestTypeValueHash",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "derivedAccount",
+        "type": "address"
+      }
+    ],
+    "name": "getDerivedAccountBinding",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "externalAddress",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint64",
+        "name": "bindingTimestamp",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint64",
+        "name": "derivedAccountSalt",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "chainId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDomainSeparatorForChainId",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
-    "name": "getDelegateStorage",
+    "name": "getEIP712DomainData",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "version",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "chainId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "salt",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "externalAddress",
+        "type": "bytes"
+      }
+    ],
+    "name": "getExternalAccountBinding",
     "outputs": [
       {
         "internalType": "address",
-        "name": "delegateStorage",
+        "name": "derivedAccount",
         "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "bindingTimestamp",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint64",
+        "name": "derivedAccountSalt",
+        "type": "uint64"
       }
     ],
     "stateMutability": "view",
@@ -1123,12 +2301,12 @@
                 "type": "uint32"
               }
             ],
-            "internalType": "struct CFD.FundingRateInfo",
+            "internalType": "struct CFDStructs.FundingRateInfo",
             "name": "fundingRateInfo",
             "type": "tuple"
           }
         ],
-        "internalType": "struct CFD.InstrumentInfo",
+        "internalType": "struct CFDStructs.InstrumentInfo",
         "name": "",
         "type": "tuple"
       }
@@ -1191,17 +2369,107 @@
                 "type": "int72"
               }
             ],
-            "internalType": "struct CFD.PositionInfo[]",
+            "internalType": "struct CFDStructs.PositionInfo[]",
             "name": "positions",
             "type": "tuple[]"
           }
         ],
-        "internalType": "struct CFD.AccountPositions[]",
-        "name": "positions",
+        "internalType": "struct CFDStructs.AccountPositions[]",
+        "name": "",
         "type": "tuple[]"
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "chainId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "getOrWriteDomainSeparator",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.Order",
+        "name": "_order",
+        "type": "tuple"
+      }
+    ],
+    "name": "getOrderTypeValueHash",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -1226,7 +2494,7 @@
     "outputs": [
       {
         "internalType": "int112",
-        "name": "",
+        "name": "pnl",
         "type": "int112"
       }
     ],
@@ -1234,16 +2502,34 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getSenderOverride",
-    "outputs": [
+    "inputs": [
       {
-        "internalType": "address",
-        "name": "senderOverride",
-        "type": "address"
+        "components": [
+          {
+            "internalType": "uint16",
+            "name": "index",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          }
+        ],
+        "internalType": "struct CFDStructs.PriceInfo",
+        "name": "priceInfo",
+        "type": "tuple"
       }
     ],
-    "stateMutability": "view",
+    "name": "getPriceInfoTypeValueHash",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -1287,44 +2573,64 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "oracle_",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "delegateStorage",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "fundingRateAccount_",
-        "type": "address"
-      },
-      {
         "internalType": "uint256",
-        "name": "maxOpenPositions_",
+        "name": "index",
         "type": "uint256"
-      },
-      {
-        "internalType": "uint8",
-        "name": "soLevel_",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint16",
-        "name": "withdrawMarginLevel_",
-        "type": "uint16"
-      },
-      {
-        "internalType": "uint112",
-        "name": "liquidationFeePercent_",
-        "type": "uint112"
       }
     ],
-    "name": "initialize",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "name": "instrumentInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "leverage",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string[12]",
+            "name": "ticker",
+            "type": "string[12]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "int40",
+                "name": "frLong",
+                "type": "int40"
+              },
+              {
+                "internalType": "int40",
+                "name": "frShort",
+                "type": "int40"
+              },
+              {
+                "internalType": "int72",
+                "name": "longFRStored",
+                "type": "int72"
+              },
+              {
+                "internalType": "int72",
+                "name": "shortFRStored",
+                "type": "int72"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastFRUpdateTime",
+                "type": "uint32"
+              }
+            ],
+            "internalType": "struct CFDStructs.FundingRateInfo",
+            "name": "fundingRateInfo",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct CFDStructs.InstrumentInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1385,7 +2691,7 @@
             "type": "bytes"
           }
         ],
-        "internalType": "struct LibValidatorMultiCFD.InternalTransfer",
+        "internalType": "struct CFDStructs.InternalTransfer",
         "name": "transfer",
         "type": "tuple"
       }
@@ -1393,6 +2699,90 @@
     "name": "internalTransfer",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint112",
+            "name": "amount",
+            "type": "uint112"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nonce",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "chainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "signerChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "uniqueHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes",
+            "name": "externalAddress",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.InternalTransferV2",
+        "name": "transfer",
+        "type": "tuple"
+      }
+    ],
+    "name": "internalTransferV2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "chainId",
+        "type": "uint64"
+      }
+    ],
+    "name": "isCustomNetworkApproved",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1427,7 +2817,7 @@
                 "type": "uint80"
               }
             ],
-            "internalType": "struct LibValidatorMultiCFD.PriceInfo[]",
+            "internalType": "struct CFDStructs.PriceInfo[]",
             "name": "prices",
             "type": "tuple[]"
           },
@@ -1447,7 +2837,7 @@
             "type": "bytes"
           }
         ],
-        "internalType": "struct LibValidatorMultiCFD.LiquidationOrder",
+        "internalType": "struct CFDStructs.LiquidationOrder",
         "name": "liquidationOrder",
         "type": "tuple"
       }
@@ -1484,7 +2874,7 @@
                 "type": "uint80"
               }
             ],
-            "internalType": "struct LibValidatorMultiCFD.PriceInfo[]",
+            "internalType": "struct CFDStructs.PriceInfo[]",
             "name": "liquidationPrices",
             "type": "tuple[]"
           },
@@ -1501,7 +2891,7 @@
                 "type": "uint80"
               }
             ],
-            "internalType": "struct LibValidatorMultiCFD.PriceInfo[]",
+            "internalType": "struct CFDStructs.PriceInfo[]",
             "name": "prices",
             "type": "tuple[]"
           },
@@ -1521,7 +2911,7 @@
             "type": "bytes"
           }
         ],
-        "internalType": "struct LibValidatorMultiCFD.MultiLiquidationOrder",
+        "internalType": "struct CFDStructs.MultiLiquidationOrder",
         "name": "liquidationOrder",
         "type": "tuple"
       }
@@ -1539,6 +2929,19 @@
         "internalType": "uint112",
         "name": "",
         "type": "uint112"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxOpenPositions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -1574,8 +2977,124 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "",
+        "name": "index",
         "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "positionInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "int112",
+            "name": "position",
+            "type": "int112"
+          },
+          {
+            "internalType": "int112",
+            "name": "frAccumulated",
+            "type": "int112"
+          },
+          {
+            "internalType": "uint32",
+            "name": "positionLastUpdate",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint80",
+            "name": "positionAvgPrice",
+            "type": "uint80"
+          },
+          {
+            "internalType": "int72",
+            "name": "positionLongFRStored",
+            "type": "int72"
+          },
+          {
+            "internalType": "int72",
+            "name": "positionShortFRStored",
+            "type": "int72"
+          }
+        ],
+        "internalType": "struct CFDStructs.PositionInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "senderAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "matcherAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "instrumentIndex",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint96",
+            "name": "amount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint80",
+            "name": "price",
+            "type": "uint80"
+          },
+          {
+            "internalType": "uint64",
+            "name": "matcherFee",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "expiration",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "buySide",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "isFromDelegate",
+            "type": "bool"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct CFDStructs.Order",
+        "name": "order",
+        "type": "tuple"
+      }
+    ],
+    "name": "recover",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       },
       {
         "internalType": "address",
@@ -1583,45 +3102,25 @@
         "type": "address"
       }
     ],
-    "name": "positionInfo",
-    "outputs": [
-      {
-        "internalType": "int112",
-        "name": "position",
-        "type": "int112"
-      },
-      {
-        "internalType": "int112",
-        "name": "frAccumulated",
-        "type": "int112"
-      },
-      {
-        "internalType": "uint32",
-        "name": "positionLastUpdate",
-        "type": "uint32"
-      },
-      {
-        "internalType": "uint80",
-        "name": "positionAvgPrice",
-        "type": "uint80"
-      },
-      {
-        "internalType": "int72",
-        "name": "positionLongFRStored",
-        "type": "int72"
-      },
-      {
-        "internalType": "int72",
-        "name": "positionShortFRStored",
-        "type": "int72"
-      }
-    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "chainId",
+        "type": "uint64"
+      }
+    ],
+    "name": "rejectCustomNetwork",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
-    "name": "renounceOwnership",
+    "name": "removeDelegate",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1631,11 +3130,6 @@
       {
         "internalType": "address",
         "name": "oracle_",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "delegateStorage",
         "type": "address"
       },
       {
@@ -1691,11 +3185,11 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "delegateStorage_",
+        "name": "delegate",
         "type": "address"
       }
     ],
-    "name": "setDelegateStorage",
+    "name": "setDelegate",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1740,7 +3234,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "newOwner",
+        "name": "newOwner_",
         "type": "address"
       }
     ],
@@ -1760,6 +3254,25 @@
     "name": "updateMatchers",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "usedDelegationRequests",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
