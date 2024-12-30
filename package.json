@@ -1,6 +1,6 @@
 {
   "name": "@electra.finance/contracts",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "type": "module",
   "description": "Electra Finance contracts typings",
   "scripts": {
